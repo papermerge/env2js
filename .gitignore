@@ -1,3 +1,4 @@
 env2js
 .envrc
 core.js.tmpl
+build/
