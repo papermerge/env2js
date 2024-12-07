@@ -20,3 +20,8 @@ jobs:
 
     - name: Build
       run: go build -v env2js.go
+
+    - uses: actions/upload-artifact@v4
+      with:
+        name: Build
+        path: env2js
