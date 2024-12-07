@@ -1,7 +1,5 @@
 # This workflow will build a golang project
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-go
-
-name: Go
+name: Build
 
 on:
   push:
@@ -21,7 +19,3 @@ jobs:
     - name: Build
       run: go build -v env2js.go
 
-    - uses: actions/upload-artifact@v4
-      with:
-        name: Build
-        path: env2js
