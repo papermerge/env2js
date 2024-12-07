@@ -26,5 +26,5 @@ jobs:
       uses: softprops/action-gh-release@v2
       with:
         files: |
-          - build/env2js.amd64
-          - build/env2js.arm64
+          build/env2js.amd64
+          build/env2js.arm64
