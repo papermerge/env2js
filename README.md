@@ -30,5 +30,6 @@ Usage:
 | `PAPERMERGE__OCR__DEFAULT_LANG_CODE` | Default OCR language code |
 | `PAPERMERGE__OCR__AUTOMATIC` | Enable automatic OCR (true/false) |
 | `PAPERMERGE__AUTH__OIDC_LOGOUT_URL` | OIDC provider logout endpoint URL |
+| `PAPERMERGE__AUTH__OIDC_CLIENT_ID`  | OIDC Client ID |
 | `PAPERMERGE__AUTH__POST_LOGOUT_REDIRECT_URI` | URL to redirect to after OIDC logout |
 
