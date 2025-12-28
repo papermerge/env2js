@@ -9,12 +9,9 @@ import (
 )
 
 type CoreContext struct {
-	PAPERMERGE__OCR__LANG_CODES            string
-	PAPERMERGE__OCR__DEFAULT_LANG_CODE     string
-	PAPERMERGE__OCR__AUTOMATIC             bool
-	PAPERMERGE__AUTH__OIDC_LOGOUT_URL      string
-	PAPERMERGE__AUTH__OIDC_CLIENT_ID       string
-	PAPERMERGE__AUTH__POST_LOGOUT_REDIRECT_URI string
+	PM_OIDC_LOGOUT_URL      string
+	PM_OIDC_CLIENT_ID       string
+	PM_POST_LOGOUT_REDIRECT_URI string
 }
 
 var (
@@ -36,12 +33,9 @@ func main() {
 	}
 
 	data := CoreContext{
-		PAPERMERGE__OCR__LANG_CODES:                os.Getenv("PAPERMERGE__OCR__LANG_CODES"),
-		PAPERMERGE__OCR__DEFAULT_LANG_CODE:         os.Getenv("PAPERMERGE__OCR__DEFAULT_LANG_CODE"),
-		PAPERMERGE__OCR__AUTOMATIC:                 getBoolEnv("PAPERMERGE__OCR__AUTOMATIC"),
-		PAPERMERGE__AUTH__OIDC_LOGOUT_URL:          os.Getenv("PAPERMERGE__AUTH__OIDC_LOGOUT_URL"),
-		PAPERMERGE__AUTH__OIDC_CLIENT_ID:           os.Getenv("PAPERMERGE__AUTH__OIDC_CLIENT_ID"),
-		PAPERMERGE__AUTH__POST_LOGOUT_REDIRECT_URI: os.Getenv("PAPERMERGE__AUTH__POST_LOGOUT_REDIRECT_URI"),
+		PM_OIDC_LOGOUT_URL:          os.Getenv("PM_OIDC_LOGOUT_URL"),
+		PM_OIDC_CLIENT_ID:           os.Getenv("PM_OIDC_CLIENT_ID"),
+		PM_POST_LOGOUT_REDIRECT_URI: os.Getenv("PM_POST_LOGOUT_REDIRECT_URI"),
 	}
 
 	templ.Execute(os.Stdout, data)
